@@ -7,9 +7,11 @@ public class Main {
 
         for (String s : examples) {
             String replacedString = s.replaceAll("[^\\d.]", "");
-            String firstDigit = Character.toString(replacedString.charAt(0));
-            String secondDigit = replacedString.substring(replacedString.length() - 1);
-            int number = Integer.parseInt(firstDigit + secondDigit);
+
+            int number = Integer.parseInt(replacedString.charAt(0) +
+                    replacedString.substring(replacedString.length() - 1)
+            );
+
             value += number;
         }
         System.out.println(value);
